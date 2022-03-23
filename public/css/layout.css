@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap');
+*  {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.45;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    background-color: #ffffff;
+}
+
+#content {
+    position: relative;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: calc(100vh - 0px);
+    transition: all 0.3s ease;
+    margin: 0;
+    background-color: #ffffff;
+  }
+
+  #content.close{
+    left: 80px;
+    width: calc(100% - 80px);
+    background-color: #ffffff;
+  }
+
+  .home-section .navbar {
+
+    justify-content: space-between;
+    padding: 20px 0px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .home-section .navbar .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+  }
+
+  .container-fluid
+  {
+    padding-bottom: 15px;
+  }
+
+  .home-section .navbar .topnav-link{
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    display: flex;
+  }
+
+  .home-section .navbar .topnav-link .fa-bars{
+    color: #ffffff;
+    font-size: 17px;
+    background: rgb(85, 85, 85);
+    padding: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+  }
+
+  .home-section .navbar .fa-bars{
+    margin: 0 0px;
+    cursor: pointer;
+    z-index: 99;
+    position: relative;
+  }
+
+  .home-section .navbar .account {
+    list-style: none;
+    position: absolute;
+    right: 20px;
+  }
+
+  .home-section a,
+  .home-section a:hover,
+  .home-section a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 0;
+    padding: 0;
+  }
+
+  .home-section .account .topnav
+  {
+      padding: 10px 10px 10px 10px;
+  }
+
+
+.fa-user-circle,
+.fa-power-off {
+    margin: 0;
+    padding: 0;
+}
+
+.fa-user-circle{
+    color: blue;
+}
+
+.fa-power-off {
+    color: red;
+}
+
+  .home-section .account .topnav:hover,
+  .profilesec:hover{
+    background: linear-gradient(-45deg, #f00d0d 0%, #ea0808 100%) border-box;
+    color: white;
+    border-radius: 25px;
+  }
+/*TOP NAVIGATION*/
+
+
+/*SIDEBAR*/
+.soreco-bg {
+    background: linear-gradient(-45deg, #f00d0d 0%, #ea0808 100%) border-box;
+
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: linear-gradient(-45deg, #f00d0d 0%, #ea0808 100%) border-box;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.sidebar .sidebar-header {
+    margin: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.sidebar .sidebar-header img{
+    width: 185px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    /* .01ab40 */
+}
+
+.sidebar .sidebar-header .stet-logo{
+    display: none;
+    width: 50px;
+    height: auto;
+}
+
+.sidebar.close .sidebar-header {
+    padding: 20px 0 0 15px;
+}
+
+.sidebar.close .sidebar-header .stet-logo{
+    display: block;
+}
+
+.sidebar.close .sidebar-header .soreco-logo{
+    display: none;
+}
+
+.sidebar.close{
+  width: 78px;
+}
+
+/* .sidebar .logo-details{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .logo-details i{
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name{
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+} */
+
+.sidebar.close .logo-details .logo_name{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links{
+  height: 100%;
+  padding: 30px 0 150px 0;
+  margin-top: 120px;
+  overflow: auto;
+}
+.sidebar.close .nav-links{
+  overflow: auto;
+  margin-top: 80px;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+}
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover{
+  background: #1d1b31;
+}
+.sidebar .nav-links li .icon-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar.close .nav-links{
+    overflow: visible;
+}
+.sidebar.close .nav-links li .icon-link{
+  display: block;
+}
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li.showMenu i.arrow{
+  transform: rotate(-180deg);
+}
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sidebar .nav-links li a .link-name{
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+.sidebar.close .nav-links li a .link-name{
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li .sub-menu{
+  padding: 8px 6px 14px 80px;
+  background: #1d1b31;
+  display: none;
+}
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+.sidebar .nav-links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+}
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li .sub-menu .link-name{
+  display: none;
+}
+.sidebar.close .nav-links li .sub-menu .link-name{
+  font-size: 14px;
+  opacity: 1;
+  display: block;
+}
+.sidebar .nav-links li .sub-menu.blank{
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar .nav-links li .active{
+  background: #1d1b31;
+}
+
+.sidebar .nav-links .showMenu{
+  background: #1d1b31;
+}
+
+
+.sidebar .profile-details{
+  position: fixed;
+  bottom: 0;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1d1b31;
+  padding: 12px 0;
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details{
+  background: none;
+}
+.sidebar.close .profile-details{
+  width: 78px;
+}
+.sidebar .profile-details .profile-content{
+  display: flex;
+  align-items: center;
+}
+.sidebar .profile-details img{
+  height: 52px;
+  width: 52px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details img{
+  padding: 10px;
+}
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job{
+  display: none;
+}
+.sidebar .profile-details .job{
+  font-size: 12px;
+}
+
+/* add resident modal */
+.modal-body select, input[type=text], input[type=date], input[type=number], input[type=password], input[type=email], input[type=tel]{
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  margin: 5px 5px 0px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.add-member .input-box .details{
+    margin-top: 10px;
+}
+
+.add-member .input-box input{
+    text-transform: capitalize;
+}
+
+.modal-body input[type=date]{
+    text-transform: uppercase;
+}
+
+  @media (max-width: 768px){
+    .name-usr, .email-usr{
+        display: none;
+    }
+}

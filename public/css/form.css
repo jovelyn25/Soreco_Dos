@@ -1,0 +1,67 @@
+#mreport td, th{
+  border: 1px solid #000 !important;
+  color: #000;
+}
+.mar-report .text-center{
+  margin: 0px 0px 3px 0px;
+}
+
+.signature-by input{
+  width: 300px ;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  text-align: center;
+}
+
+.noted-sign-cap{
+  margin-left: 100px;
+}
+
+#mreport button{
+  width: 100px;
+  height: 35px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#mreport button:hover{
+  background-color: #fff;
+  color: blue;
+}
+
+
+/*for printing*/
+
+
+    @media print {
+
+      #mreport nav, button, i, a {
+        display: none;
+      }
+      #printSection {
+        width: 100%;
+      }
+
+      #report-title{
+        color: #fff;
+      }
+
+      body {
+        font-size: 11pt;
+        line-height: 1;
+        }
+
+      #mreport .col-md-12{
+        margin: 20px 20px 20px 20px;
+      }
+
+    }
+
+    #printSection {
+      width: 100%;
+    }
+

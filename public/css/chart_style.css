@@ -1,0 +1,7 @@
+#content{
+  height: 100vh;
+}
+
+.chart-container #myChart{
+  border: 1px solid ;
+}

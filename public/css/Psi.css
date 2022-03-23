@@ -1,0 +1,281 @@
+/*health consultation*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap');
+* , body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/*BLOCK TITLE .NO MARGIN PADDING*/
+h3.block-title {
+    font-size: 22px;
+    color: #fff;
+    background: transparent;
+}
+
+.block-title {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1.75rem;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.btn-add{
+  width: 100px;
+  position: relative;
+  background-color:#f00d0d;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.consult-pane i
+{
+  padding-right: 5px;
+}
+/*BLOCK TITLE .NO MARGIN PADDING*/
+
+.consult-pane {
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  width: 95%;
+  padding:10px;
+  box-shadow: 1px 1px 5px 0px grey;
+  height: auto;
+}
+
+
+.consult-pane .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #2ae88a;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  font-weight: bolder;
+
+}
+
+.consult-pane .nav-link
+  {
+    color: #495057;
+
+  }
+
+/*CONSULT DATATABLE*/
+.consulttable-title {
+  color: #2e2d2d;
+  text-align: start;
+}
+
+ .consul_view{
+    color: #007bff;
+}
+
+ .consul_edit{
+    color: #ffc107;
+}
+
+ .consul_delete{
+    color: #dc3545;
+}
+
+.manage {
+  margin: 2px;
+}
+
+.PsiSchedule-list {
+  background: #fff;
+  padding: 10px 10px 10px 0px;
+  padding-bottom: 2px;
+  border-radius: 2px;
+  width: 100%;
+
+}
+.soreco-box-shadow {
+  border-radius: 0;
+  border: 0;
+  -webkit-box-shadow: 0 0 0 1px #dce3ec, 0 8px 16px 0 #dce3ec;
+  box-shadow: 0 0 0 1px #dce3ec, 0 8px 16px 0 #dce3ec;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.PsiSchedule-list{
+  padding: 20px;
+}
+
+table.table tbody td, table.table thead th {
+  font-size: 13px;
+}
+
+/*ADD CONSULTATION MODAL*/
+
+
+#addnewnotice .modal-header {
+  background-color: #2ae88a;
+  color: #ffffff;
+}
+
+#addnewnotice textarea {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 2px 5px 5px 0px;
+  text-transform: capitalize;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 10px;
+
+}
+
+#addnewnotice textarea:focus {
+  height: 100%;
+}
+
+#addnewnotice .details  {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 3px;
+  color: rgb(90, 90, 90);
+  font-size: 13px;
+}
+
+
+
+.form-search{
+  margin: 10px 0 0 0;
+  position: relative;
+}
+
+.consul-add #hc-search-input{
+  box-shadow: 1px 1px 5px grey;
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid #08aeea;
+}
+
+.hc-search-btn {
+  margin: 0px 8px 0 0px;
+  box-shadow: 1px 1px 5px 0px grey;
+  border: 2px solid #08aeea;
+  background-color: #08aeea;
+  padding: 9px 10px;
+  border-radius: 0 10px 10px 0;
+  color: #ffffff;
+}
+
+/* .consul-add .res_prof input{
+  box-sizing: border-box;
+  width: 150px;
+  height: 30px;
+  margin: 2px 5px 5px 0px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+} */
+
+/*VIEW CONSULTATION MODAL*/
+
+
+#viewnewnotice .modal-header {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+#viewnewnotice textarea {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 2px 5px 5px 0px;
+  text-transform: capitalize;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 10px;
+
+}
+
+#viewnewnotice textarea:focus {
+  height: 100%;
+}
+
+#viewnewnotice .details  {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 3px;
+  color: rgb(90, 90, 90);
+  font-size: 13px;
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid #08aeea;
+}
+
+
+
+/*EDIT CONSULTATION MODAL*/
+
+
+#editnewnotice .modal-header {
+  background-color: #ffc107;
+  color: #ffffff;
+}
+
+#editnewnotice textarea {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 2px 5px 5px 0px;
+  text-transform: capitalize;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 10px;
+
+}
+
+#editnewnotice textarea:focus {
+  height: 100%;
+}
+
+#editnewnotice .details  {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 3px;
+  color: rgb(90, 90, 90);
+  font-size: 13px;
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid #08aeea;
+}
+
+
+.modal-content {
+  margin: 25px auto;
+  border: 2px solid #888;
+  width: auto;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.form-group input{
+  width: 100%;
+  line-height: 0;
+}

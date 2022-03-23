@@ -1,0 +1,257 @@
+/*Resident Profile*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap');
+* , body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+h3.block-title {
+  font-size: 22px;
+  color: #fff;
+  background: transparent;
+}
+
+.block-title {
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+min-height: 1.75rem;
+margin: 0;
+font-size: 1.125rem;
+font-weight: 400;
+line-height: 1.75;
+}
+
+.no-margin-padding {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding: 5px 20px;
+  background: #2e2d2d;
+}
+
+/* .head-resprof .form-search{
+  margin: 10px 0 0 0;
+}
+
+.head-resprof .form-search input{
+  box-shadow: 1px 1px 5px grey;
+  border: 2px solid #08aeea;
+  padding: 5px 8px;
+  border-radius: 10px 0 0 10px;
+}
+
+.head-resprof .form-search input:focus{
+  outline: none;
+  border: 2px solid #08aeea;
+}
+
+.head-resprof .form-search .btn-search {
+  margin: 0px 8px 0 0px;
+  box-shadow: 1px 1px 5px 0px grey;
+  border: 2px solid #08aeea;
+  background-color: #08aeea;
+  padding: 9px 10px;
+  border-radius: 0 10px 10px 0;
+  color: #ffffff;
+}
+ */
+/* button {
+  box-shadow: 1px 1px 5px grey;
+} */
+/*******************************
+//Add resident button
+*******************************/
+.btn-add-res{
+  margin-top: 10px, 10px;
+  width: 120px;
+  display: flex;
+  box-shadow: 1px 1px 5px 0px grey;
+  background-color: #2ae88a !important;
+  border: 2px solid #2ae88a;
+  padding: 5px 5px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.fa-user-plus{
+  padding: 5px 0px;
+}
+
+.alert{
+  position: fixed;
+  width: auto;
+  margin: 5px;
+}
+
+
+
+/*******************************
+//Modal Design for Add Resident
+*******************************/
+.res-add .modal-header {
+  background-color: #2ae88a;
+  color: #ffffff;
+}
+
+
+
+
+.btn-success
+{
+  background-color: #2ae88a;
+  border: 0px solid;
+}
+
+.btn-outline-success {
+  color: #2ae88a;
+  border-color: #2ae88a;
+}
+
+
+.add-resident .details {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 3px;
+  color: rgb(90, 90, 90);
+}
+
+#editResidentModal .details {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 3px;
+  color: rgb(90, 90, 90);
+  text-align: start;
+}
+
+#viewResidentModal .details {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 3px;
+  color: rgb(90, 90, 90);
+  text-align: start;
+}
+
+
+/*****************************************
+//Modal Design for View Resident Profile
+******************************************/
+.res-view .modal-header {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/*
+.res-view .modal-content .name{
+  font-size: 16px;
+} */
+
+.res-view .modal-content .name:nth-child(1){
+  text-transform: capitalize;
+}
+
+.res-view .head-info{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #6c757d;
+}
+
+.res-view .head-info .under-info strong{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.res-view .com-info strong{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.res-view .com-info .strong:nth-child(1){
+  text-transform: capitalize;
+}
+
+.delete_res{
+  background-color: red;
+  color: white;
+}
+
+
+.res-edit .modal-header{
+  background-color: #ffc107;
+  color: #ffffff;
+}
+
+.res-edit input{
+  text-transform: capitalize;
+}
+
+.btn-warning {
+  color: white;
+}
+
+th{
+  text-align: center;
+}
+
+td{
+  font-size: 1rem;
+  text-align: center;
+}
+
+/*table responsiveness*/
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 1px;
+  }
+
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+@media only screen and (max-width: 393px){
+
+  .head-title{
+    display: none;
+  }
+
+
+
+}
