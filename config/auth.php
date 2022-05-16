@@ -40,15 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admin_admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
+     //   'admin_admin' => [
+    //        'driver' => 'session',
+    //        'provider' => 'admins',
+     //   ],
 
-        'member' => [
-            'driver' => 'session',
-            'provider' => 'member',
-        ],
+     //   'member' => [
+    //        'driver' => 'session',
+    //        'provider' => 'member',
+   //     ],
 
     ],
 
@@ -80,14 +80,14 @@ return [
         //     'table' => 'users',
         // ],
 
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Admin_admin::class,
-        ],
-        'member' => [
-            'driver' => 'eloquent',
-            'model' => App\member::class,
-        ],
+    //    'admins' => [
+    //        'driver' => 'eloquent',
+    //        'model' => App\Admin_admin::class,
+    //    ],
+     //   'member' => [
+     //       'driver' => 'eloquent',
+     //       'model' => App\member::class,
+     //   ],
 
 
     ],

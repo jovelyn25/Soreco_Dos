@@ -14,6 +14,8 @@ use App\Http\Controllers\PsiNoticeFormController;
 use App\Http\Controllers\PsiScheduleController;
 use App\Http\Controllers\RequisitionVoucherController;
 use App\Http\Controllers\FullCalendarController;
+use App\Http\Controllers\GenerateNoticeController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,15 +54,18 @@ Route::post('email-validate', [EmailController::class, 'checkEmail'])->name('che
 Route::group(['middleware' => ['auth']], function () {
     // SIDEBAR//
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/member', [DashboardController::class, 'index'])->name('dashboard.member');
     Route::get('/PsiSchedule', [DashboardController::class, 'PsiSchedule'])->name('dashboard.PsiSchedule');
     Route::get('/myprofile', [DashboardController::class, 'users_profile'])->name('dashboard.myprofile');
+    // Route::get('/rv', [DashboardController::class, 'RequisitionVoucher'])->name('dashboard.RequisitionVoucher');
 
-    Route::group(['middleware' => ['role:admin_admin']], function () {
-        //routes for PSI
-        Route::get('/PsiSchedule', [DashboardController::class, 'PsiSchedule'])->name('dashboard.PsiSchedule');
-        Route::resource('/PsiSchedule', PsiScheduleController::class);
-    });
+    ///  Route::group(['middleware' => ['role:admin_admin']], function () {
+    //routes for PSI
+    Route::resource('/PsiSchedule', PsiScheduleController::class);
+    Route::get('/PsiSchedule', [DashboardController::class, 'PsiSchedule'])->name('dashboard.PsiSchedule');
+    Route::get('Psischedule/destroy/{id}', [PsiScheduleController::class, 'destroy'])->name('Psischedule.destroy');
+    // Route::delete('/destroy', 'App\Http\Controllers\PsiScheduleController@destroy')->name('Psischedule.destroy');
+    //   });
+
     //route for myprofile page//
     Route::resource('/myprofile', MyProfileController::class);
 
@@ -69,8 +74,25 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/change/password',  [ChangePasswordController::class, 'changePassword'])->name('profile.change.password');
     Route::post('change-profile-picture', [AdminController::class, 'updatePicture'])->name('PictureUpdate');
 
-
     //routes for events//
     Route::get('/events', [FullCalendarController::class, 'index'])->name('events.view');
     Route::post('events/action', [FullCalendarController::class, 'action'])->name('events.action');
+
+    //routes for mail
+    // Route::get('send', 'PsiScheduleController@store');
+    // Route::get('send', [PsiScheduleController::class, 'send']);
+    // Route::post('send', [PsiScheduleController::class, 'store']);
+    // Route::get('send', [PsiScheduleController::class, 'store']);
+    Route::get('/PsiSchedule', [PsiScheduleController::class, 'modals.PsiSchedule.Add'])->name('PsiSchedule');
+    Route::post('/PsiSchedule', [PsiScheduleController::class, 'store'])->name('PsiSchedule.store');
+
+
+    //route to Generate notice
+    // Route::get('/generatenotice', [GenerateNoticeController::class, 'generatenotice'])->name('navigation_links.generatenotice');
+    Route::get('/generatenotice', [PsiScheduleController::class, 'generatenotice'])->name('navigation_links.generatenotice');
+
+    //Route for crud
+    // Route::group(['prefix' => 'PsiSSchedule'], function(){
+    //     Route::delete('/{PsiSchedule}/delete', 'PsiSchedule@destroy')->name('Psischedule.destroy');
+    // })
 });

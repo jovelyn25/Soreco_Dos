@@ -25,7 +25,7 @@ class usersController extends Controller
         if ($request->has('view_deleted')) {
             $member = User::onlyTrashed()->get();
         }
-        return view('navigation_links.member')->with('member', $member);
+        return view('navigation_links.employee')->with('member', $member);
     }
     /**
      * Show the form for creating a new resource.
@@ -156,4 +156,3 @@ class usersController extends Controller
         return redirect()->route('member.index')->with('success', 'Deleted Successfully.');
     }
 }
-

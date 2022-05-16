@@ -30,7 +30,6 @@
                     <div class="d-flex justify-content-center">
                         <div class="counter d-flex align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center">
-                                <i class="fas fa-user-nurse"></i>
                             </div>
 
                         </div>
@@ -60,12 +59,12 @@
             </div>
 
             <hr>
-            <div class="row d-flex">
+            {{-- <div class="row d-flex">
                 <div class="col-md-8">
                     <div class="dashboarditem container">
                         <canvas class="ms-4" id="myChart" height="200"></canvas>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="col-md-4">
                     <div class="dashboarditem container">

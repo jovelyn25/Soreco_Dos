@@ -46,7 +46,7 @@
                  <a class="topnav me-2" href="myprofile" title="My Profile">
                      @if (Auth::User()->profile_image)
                          <img class="user rounded-circle admin_picture"
-                             src="{{ asset('/uploads/avatars/' . Auth::user()->profile_image) }}" alt="profile_image">
+                             src="{{ asset('images/' . Auth::user()->profile_image) }}" alt="profile_image">
                      @endif
                  </a>
 

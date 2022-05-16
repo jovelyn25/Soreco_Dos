@@ -26,12 +26,13 @@
                             @include('modals.MedicineRequest.Generate') --}}
                         </div>
                         <hr>
+
                         <div class="table-responsive mb-3">
                             <table id="PsiSchedule-datatable" class="table table-bordered table-striped datatable-hover">
                                 <thead>
                                     <tr role="row">
                                         <th scope="col">ID No.</th>
-                                        <th scope="col">Day</th>
+                                        <th scope="col">Day/Date</th>
                                         <th scope="col">Time</th>
                                         <th scope="col">Affected Areas</th>
                                         <th scope="col">Reasons</th>
@@ -40,42 +41,60 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if ($PsiSchedule)
-                                        @foreach ($PsiSchedule as $PsiSchedule)
+                                    @if ($psi_schedules)
+                                        @foreach ($psi_schedules as $psischedule)
                                             <tr>
-                                                <td data-label="ID">{{ $PsiSchedule->id }}</td>
-                                                <td data-label="Date">{{ $PsiSchedule->notice_date }}</td>
-                                                <td data-label="Time">{{ $PsiSchedule->notice_time }}</td>
-                                                <td data-label="Affected Areas">{{ $PsiSchedule->notice_areas }}</td>
-                                                <td data-label="Reasons">{{ $PsiSchedule->notice_reasons }}</td>
+                                                <td data-label="ID">{{ $psischedule->id }}</td>
+                                                <td data-label="Date">{{ $psischedule->notice_date }}</td>
+                                                <td data-label="Time">{{ $psischedule->notice_time }}</td>
+                                                <td data-label="Affected Areas">{{ $psischedule->notice_areas }}</td>
+                                                <td data-label="Reasons">{{ $psischedule->notice_reasons }}</td>
                                                 <td
                                                     style="white-space:nowrap; text-align:center; border-bottom: 1px solid black; border-top: 1px solid black;">
+
+
                                                     {{-- ---***************************** SHOW BUTTON *******************************---- --}}
-                                                    <a data-bs-toggle="modal" type="button" class="btn btn-primary"
-                                                        data-notice_date="{{ $PsiSchedule->notice_date }}"
-                                                        data-notice_time="{{ $PsiSchedule->notice_time }}"
-                                                        data-notice_areas="{{ $PsiSchedule->notice_areas }}"
-                                                        data-notice_reasons="{{ $PsiSchedule->notice_reasons }}"
-                                                        data-bs-target="#viewnewotice">
-                                                        <i class="fas fa-eye"></i>
+                                                    {{-- <a data-bs-toggle="modal" type="button" class="btn btn-warning"
+                                                        data-notice_date="{{ $psischedule->notice_date }}"
+                                                        data-notice_time="{{ $psischedule->notice_time }}"
+                                                        data-notice_areas="{{ $psischedule->notice_areas }}"
+                                                        data-notice_reasons="{{ $psischedule->notice_reasons }}"
+                                                        data-bs-target="#viewnewnotice">
+                                                        <i class="fa fa-paper-plane"></i>
                                                     </a>
-                                                    @include('modals.PsiSchedule.Show')
+                                                    @include('modals.PsiSchedule.Show') --}}
+
+
+
+
+                                                    {{-- ---***************************** GENERATE BUTTON *******************************---- --}}
+                                                    <a data-bs-toggle="notice" href="generatenotice" type="button"
+                                                        class="btn btn-primary"
+                                                        data-notice_date="{{ $psischedule->notice_date }}"
+                                                        data-notice_time="{{ $psischedule->notice_time }}"
+                                                        data-notice_areas="{{ $psischedule->notice_areas }}"
+                                                        data-notice_reasons="{{ $psischedule->notice_reasons }}"
+                                                        data-bs-target="#notice">
+                                                        {{-- <i class="fas fa-eye">Generate</i> --}}
+                                                        <i class="fa fa-print"></i>
+
+                                                    </a>
 
                                                     {{-- ---***************************** EDIT BUTTON *******************************---- --}}
-                                                    <a data-bs-toggle="modal" type="button" class="btn btn-warning"
-                                                        data-notice_date="{{ $PsiSchedule->notice_date }}"
-                                                        data-notice_time="{{ $PsiSchedule->notice_time }}"
-                                                        data-notice_areas="{{ $PsiSchedule->notice_areas }}"
-                                                        data-notice_reasons="{{ $PsiSchedule->notice_reasons }}"
+                                                    {{-- <a data-bs-toggle="modal" type="button" class="btn btn-warning"
+                                                        data-notice_date="{{ $psischedule->notice_date }}"
+                                                        data-notice_time="{{ $psischedule->notice_time }}"
+                                                        data-notice_areas="{{ $psischedule->notice_areas }}"
+                                                        data-notice_reasons="{{ $psischedule->notice_reasons }}"
                                                         data-bs-target="#editnewnotice">
                                                         <i class="manage fas fa-edit"></i>
                                                     </a>
-                                                    @include('modals.PsiSchedule.Edit')
+                                                    @include('modals.PsiSchedule.Edit') --}}
 
                                                     {{-- ---***************************** DELETE BUTTON *******************************---- --}}
                                                     <a data-bs-toggle="modal" type="button" class="btn btn-danger"
                                                         data-bs-target="#deletenewnotice"
-                                                        data-id="{{ $PsiSchedule->id }}">
+                                                        data-id="{{ $psischedule->id }}">
                                                         <i class="manage fas fa-trash"></i>
                                                     </a>
                                                     @include('modals.PsiSchedule.Delete')

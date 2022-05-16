@@ -7,11 +7,19 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use DB;
 use Carbon\Carbon;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DashboardController extends Controller
 {
+
     public function index()
     {
+        $user = Auth::User();
+        return view('navigation_links/dashboard')->with('user', $user);
+    }
+
+
+    /**
         if (Auth::user()->hasRole('admin_admin')) {
             $member = User::whereRoleIs('member')->count();
             $PsiSchedule = DB::table('psi_schedules')->count();
@@ -28,12 +36,7 @@ class DashboardController extends Controller
 
             ));
         }
-    }
-    /**  public function index()
-{
-    $user =User::whereRoleIs('admin')->orWhereRoleIs('member')->get();
-
-} */
+    }*/
 
 
 
@@ -45,6 +48,12 @@ class DashboardController extends Controller
 
     public function PsiSchedule()
     {
-        return view('navigation_links.PsiSchedule');
+        $user = Auth::User();
+        return view('navigation_links.PsiSchedule')->with('user', $user);
     }
+    // public function RequisitionVoucher()
+    // {
+    //     $user = Auth::User();
+    //     return view('navigation_links.rv')->with('user', $user);
+    // }
 }

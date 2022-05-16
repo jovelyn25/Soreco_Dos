@@ -17,6 +17,7 @@
                         <input class="name align-text-left" name="notice_date" id="notice_date" type="text"
                             placeholder="">
                     </div>
+
                     <div class="input-box">
                         <div class="text-start details">Time</div>
                         <input class="name align-text-left" name="notice_time" id="notice_time" type="text"
@@ -32,16 +33,16 @@
                         <input class="name align-text-left" name="notice_reasons" id="notice_reasons" type="text"
                             placeholder="">
                     </div>
-
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submt" class="btn btn-warning">Update</button>
-                </div>
+                    <button type="submit" class="btn btn-warning">Update</button>
 
+
+                </div>
             </form>
         </div>
-
     </div>
 
 </div>

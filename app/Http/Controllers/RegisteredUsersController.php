@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RegisteredUsersController extends Controller
 {
@@ -47,7 +47,7 @@ class RegisteredUsersController extends Controller
             'contact' => 'required', 'string', 'max:11',
             'password' => 'required', 'min:6', 'max:8',
             'password_confirmation' => 'required',
-            'role_id' => 'required',
+            'user_id' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -64,7 +64,7 @@ class RegisteredUsersController extends Controller
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]));
-        $user->attachRole($request->role_id);
+        // $user->attachRole($request->user_id);
         event(new Registered($user));
 
         return redirect()->intended(route('dashboard'))->with('success', 'Login Successfully!');

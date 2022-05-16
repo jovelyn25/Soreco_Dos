@@ -115,11 +115,11 @@
 
                         <div class="row d-flex flex-wrap col-12">
                             <div class="">
-                                <label class="control-label" for="role-id">Register as:</label>
-                                <select name="role_id" class="required">
+                                <label class="control-label" for="user_id">Register as:</label>
+                                <select name="user_id" class="required">
                                     <option value="">Choose</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="member">Member</option>
+                                    <option value="admin_admin">Employee</option>
+                                    <!--  <option value="member">Member</option> -->
                                 </select>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
 
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-success">SIGN UP</button>
+                    <button type="submit" class="btn btn-success">{{ __('Register') }}</button>
                     <style>
                         .btn-outline-success {
                             color: #f00d0d;

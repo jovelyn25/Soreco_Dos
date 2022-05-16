@@ -15,10 +15,11 @@ class CreatePsiSchedulesTable extends Migration
     {
         Schema::create('psi_schedules', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('notice_date');
-            $table->time('notice_time');
+            $table->string('notice_date');
+            $table->string('notice_time');
             $table->string('notice_areas');
             $table->string('notice_reasons');
+            $table->timestamps();
         });
     }
 

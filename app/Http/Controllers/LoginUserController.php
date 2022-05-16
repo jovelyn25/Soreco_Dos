@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Hash;
-use Session;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use RealRashid\SweetAlert\Facades\Alert;
+use Alert;
 
 class LoginUserController extends Controller
 {
@@ -28,7 +28,7 @@ class LoginUserController extends Controller
             if (Hash::check($password, optional($credential)->password)) {
                 $request->session()->put('success');
                 if (Auth::attempt(['email' => $email, 'password' => $password])) {
-                    return redirect()->intended(route('dashboard'))->with('success', 'Login Successfully!');
+                    return redirect()->intended(route('dashboard'))->withSuccess('Login Successfully!');
                 }
             } else {
                 return back()->with('toast_error', 'Password Is Incorrect!');

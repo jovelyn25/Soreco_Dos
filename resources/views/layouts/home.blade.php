@@ -24,11 +24,14 @@
     <script src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/datetime/1.1.1/js/dataTables.dateTime.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 
+    {{-- <script src="{{ asset('js/general.js') }}"></script> --}}
     <script src="{{ asset('js/general.js') }}"></script>
-    <script src="{{ asset('js/PsiSchedule.js') }}"></script>
-    <script src="{{ asset('js/PsiNoticePrint.js') }}"></script>
+    <script src="{{ asset('js/psischedule.js') }}"></script>
+    <script src="{{ asset('js/PsiScheduleNoticePrint.js') }}"></script>
     <script src="{{ asset('js/datatables.js') }}"></script>
+    {{-- <script src="{{ asset('js/bhw.js') }}"></script> --}}
 
     @include('sweetalert::alert')
 
@@ -88,8 +91,6 @@
             }
         });
     </script>
-
-
 </body>
 
 </html>

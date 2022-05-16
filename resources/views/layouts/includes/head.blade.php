@@ -13,11 +13,11 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/member_profile.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/form.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/manageaccounts.css') }}">
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/manageaccounts.css') }}"> --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('css/admin_dashboard.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboards.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/manageaccounts.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/psi.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/bhw.css') }}">
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('css/Psi.css') }}"> --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('css/PsiSched.css') }}">
 <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css">
@@ -34,7 +34,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script> --}}
-{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.10.1/locales-all.min.js,npm/fullcalendar@5.10.1/locales-all.min.js"> --}}
-{{-- <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"> --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script> --}}
+{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.10.1/locales-all.min.js,npm/fullcalendar@5.10.1/locales-all.min.js">
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"> --}}

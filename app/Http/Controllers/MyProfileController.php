@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class MyProfileController extends Controller
 {
@@ -95,7 +97,7 @@ class MyProfileController extends Controller
         // User::findOrFail($request->user_id)->update($user);
         // return redirect()->route('RegisteredUsers.index')->with('success', 'Updated Successfully.');
 
-        $validator = \Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
             'fname' => 'required', 'string', 'max:255',
             'lname' => 'required', 'string', 'max:255',
             'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
@@ -140,10 +142,10 @@ class MyProfileController extends Controller
     function changePassword(Request $request)
     {
         //Validate form
-        $validator = \Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
             'oldpassword' => [
                 'required', function ($attribute, $value, $fail) {
-                    if (!\Hash::check($value, Auth::user()->password)) {
+                    if (!Hash::check($value, Auth::user()->password)) {
                         return $fail(__('The current password is incorrect'));
                     }
                 },
@@ -167,7 +169,7 @@ class MyProfileController extends Controller
             return response()->json(['status' => 0, 'error' => $validator->errors()->toArray()]);
         } else {
 
-            $update = User::find(Auth::user()->id)->update(['password' => \Hash::make($request->newpassword)]);
+            $update = User::find(Auth::user()->id)->update(['password' => Hash::make($request->newpassword)]);
 
             if (!$update) {
                 return redirect()->route('myprofile.index')->with('error', 'Something went wrong, Failed to update password in db.');
