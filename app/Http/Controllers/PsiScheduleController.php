@@ -35,6 +35,7 @@ class PsiScheduleController extends Controller
             'notice_areas' => $request['notice_areas'],
             'notice_reasons' => $request['notice_reasons'],
         ]);
+
         // $emails = ['eto_soreco2@yahoo.com', 'soreco2.cpd@gmail.com'];
         $emails = ['jovelynestadola@sorsu.edu.ph'];
         Mail::send(
@@ -56,7 +57,7 @@ class PsiScheduleController extends Controller
         );
 
         $psischedule->save();
-        return redirect()->route('PsiSchedule.index')->with('success', 'Your request has been added & sent Successfully.');
+        return redirect()->route('PsiSchedule.index')->with('success', 'Your request has been sent Successfully.');
     }
     // public function send()
     // {
@@ -83,9 +84,11 @@ class PsiScheduleController extends Controller
     {
         $todayTime = Carbon::now()->format('H:i:m', 'Philippines');
         $psischedule = PsiSchedule::get();
+        // $pdf = PDF::loadView('navigation_links.generatenotice', $psischedule);
         $todayMonth = Carbon::now()->format('F, Y', 'Philippines');
         return view('navigation_links.generatenotice', compact('todayMonth', 'psischedule', 'todayTime'));
-        // return view('navigation_links.generatenotice');
+        // return view('navigation_links.generatenotice'); $pdf->download('PSI.pdf'),
+
     }
 
     public function show($id)
@@ -99,9 +102,6 @@ class PsiScheduleController extends Controller
     //     $psischedule = PsiSchedule::find($id);
     //     return redirect()->route('PsiSchedule.index')->with('success', 'Sent Successfully.');
     // }
-
-
-
 
     // public function update(Request $request)
     // {
@@ -136,13 +136,13 @@ class PsiScheduleController extends Controller
     //     // PsiSchedule::findOrFail($request->id)->update($psischedule);
     //     $psischedule = PsiSchedule::find($request->id);
     //     return redirect()->route('PsiSchedule.index')->with('success', 'Updated Successfully.');
-    // }
+
     public function destroy($id)
     {
-        // $delete = $id->all();
-        // echo "<pre>";
-        // print_r($delete);
-        // die;
+        //  $delete = $id->all();
+        //     echo "<pre>";
+        //     print_r($delete);
+        //     die;
         $psischedule =  PsiSchedule::findOrFail($id);
         $psischedule->delete();
         return redirect()->route('PsiSchedule.index')->with('success', 'Deleted Successfully.');

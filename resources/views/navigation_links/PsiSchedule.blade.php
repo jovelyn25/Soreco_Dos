@@ -31,7 +31,7 @@
                             <table id="PsiSchedule-datatable" class="table table-bordered table-striped datatable-hover">
                                 <thead>
                                     <tr role="row">
-                                        <th scope="col">ID No.</th>
+                                        {{-- <th scope="col">ID No.</th> --}}
                                         <th scope="col">Day/Date</th>
                                         <th scope="col">Time</th>
                                         <th scope="col">Affected Areas</th>
@@ -44,7 +44,7 @@
                                     @if ($psi_schedules)
                                         @foreach ($psi_schedules as $psischedule)
                                             <tr>
-                                                <td data-label="ID">{{ $psischedule->id }}</td>
+                                                {{-- <td data-label="ID">{{ $psischedule->id }}</td> --}}
                                                 <td data-label="Date">{{ $psischedule->notice_date }}</td>
                                                 <td data-label="Time">{{ $psischedule->notice_time }}</td>
                                                 <td data-label="Affected Areas">{{ $psischedule->notice_areas }}</td>
@@ -63,8 +63,6 @@
                                                         <i class="fa fa-paper-plane"></i>
                                                     </a>
                                                     @include('modals.PsiSchedule.Show') --}}
-
-
 
 
                                                     {{-- ---***************************** GENERATE BUTTON *******************************---- --}}

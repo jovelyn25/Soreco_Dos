@@ -45,14 +45,14 @@
                     </div>
 
                     <br>
-                    <h6 class="p-0 m-0">NOTE: The notice will be send directly to the CPD for approval. Thank
+                    <h6 class="p-0 m-0">NOTE: The notice will be sent directly to the CPD. Thank
                         you.</h6>
             </div>
 
             <div class="modal-footer">
 
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">CANCEL</button>
-                <button type="submit" value="submit" " class=" btn btn-success">SEND AND ADD</button>
+                <button type="submit" value="submit" " class=" btn btn-success">OK</button>
 
                 </form>
             </div>

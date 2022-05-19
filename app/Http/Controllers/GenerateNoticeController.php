@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PsiSchedule;
 use Carbon\Carbon;
+use PDF;
 
 class GenerateNoticeController extends Controller
 {
+
+
     // public function index()
     // {
     //     $todayTime = Carbon::now()->format('H:i:m', 'Philippines');
@@ -21,4 +24,5 @@ class GenerateNoticeController extends Controller
     //     $psischedule = PsiSchedule::find($id);
     //     return view('navigation_links.generatenotice')->with($psischedule, $id);
     // }
+
 }
