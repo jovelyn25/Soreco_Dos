@@ -36,8 +36,7 @@ class PsiScheduleController extends Controller
             'notice_reasons' => $request['notice_reasons'],
         ]);
 
-        // $emails = ['eto_soreco2@yahoo.com', 'soreco2.cpd@gmail.com'];
-        $emails = ['jovelynestadola@sorsu.edu.ph'];
+        $emails = ['eto_soreco2@yahoo.com', 'soreco2.cpd@gmail.com'];
         Mail::send(
             'navigation_links.psiMail',
             array(
